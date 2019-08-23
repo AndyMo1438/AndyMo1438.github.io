@@ -54,19 +54,19 @@
   };
 </script>
 
-  <meta name="description" content="My New Blog!">
-<meta name="keywords" content="Algorithm">
+  <meta name="description" content="反正我输出无解24分 贪心 判断是否可行：任意两点（已知的点）曼哈顿距离*d &amp;gt;= 两点价值之差的绝对值 丢进小根堆，价值小的先 每次取堆顶，四向扩展，标记，可保证正确性 代码： 12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758">
+<meta name="keywords" content="题目">
 <meta property="og:type" content="article">
-<meta property="og:title" content="New Post">
-<meta property="og:url" content="andymo.top/2019/08/23/newpost/index.html">
+<meta property="og:title" content="牛客NOIP暑期七天营-普及组4 C">
+<meta property="og:url" content="andymo.top/2019/08/23/牛客NOIP暑期七天营-普及组4 C/index.html">
 <meta property="og:site_name" content="AndyMo&#39;s Blog">
-<meta property="og:description" content="My New Blog!">
+<meta property="og:description" content="反正我输出无解24分 贪心 判断是否可行：任意两点（已知的点）曼哈顿距离*d &amp;gt;= 两点价值之差的绝对值 丢进小根堆，价值小的先 每次取堆顶，四向扩展，标记，可保证正确性 代码： 12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-08-23T07:45:59.972Z">
+<meta property="og:updated_time" content="2019-08-23T12:59:43.925Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="New Post">
-<meta name="twitter:description" content="My New Blog!">
-  <link rel="canonical" href="andymo.top/2019/08/23/newpost/">
+<meta name="twitter:title" content="牛客NOIP暑期七天营-普及组4 C">
+<meta name="twitter:description" content="反正我输出无解24分 贪心 判断是否可行：任意两点（已知的点）曼哈顿距离*d &amp;gt;= 两点价值之差的绝对值 丢进小根堆，价值小的先 每次取堆顶，四向扩展，标记，可保证正确性 代码： 12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758">
+  <link rel="canonical" href="andymo.top/2019/08/23/牛客NOIP暑期七天营-普及组4 C/">
 
 
 <script id="page-configurations">
@@ -80,7 +80,7 @@
   };
 </script>
 
-  <title>New Post | AndyMo's Blog</title>
+  <title>牛客NOIP暑期七天营-普及组4 C | AndyMo's Blog</title>
   <meta name="generator" content="Hexo 3.9.0">
   
 
@@ -227,7 +227,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="andymo.top/2019/08/23/newpost/">
+    <link itemprop="mainEntityOfPage" href="andymo.top/2019/08/23/牛客NOIP暑期七天营-普及组4 C/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="AndyMo">
@@ -239,7 +239,7 @@
       <meta itemprop="name" content="AndyMo's Blog">
     </span>
       <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">New Post
+        <h1 class="post-title" itemprop="name headline">牛客NOIP暑期七天营-普及组4 C
 
           
         </h1>
@@ -255,7 +255,7 @@
                 
               
 
-              <time title="创建时间：2019-08-23 15:37:47 / 修改时间：15:45:59" itemprop="dateCreated datePublished" datetime="2019-08-23T15:37:47+08:00">2019-08-23</time>
+              <time title="创建时间：2019-08-23 15:37:47 / 修改时间：20:59:43" itemprop="dateCreated datePublished" datetime="2019-08-23T15:37:47+08:00">2019-08-23</time>
             </span>
           
             
@@ -282,7 +282,14 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p><strong>My New Blog!</strong></p>
+        <p><del>反正我输出无解24分</del></p>
+<p><strong>贪心</strong></p>
+<p>判断是否可行：任意两点（已知的点）曼哈顿距离*d &gt;= 两点价值之差的绝对值</p>
+<p>丢进小根堆，价值小的先</p>
+<p>每次取堆顶，四向扩展，标记，可保证正确性</p>
+<p>代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;cstdio&gt;</span><br><span class="line">#include&lt;algorithm&gt;</span><br><span class="line">#include&lt;cstring&gt;</span><br><span class="line">#include&lt;queue&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">namespace io&#123;</span><br><span class="line">    #define re register</span><br><span class="line">    #define ll long long</span><br><span class="line">    #define inf 0x3f3f3f3f</span><br><span class="line">    #define il inline </span><br><span class="line">    #define in1(a) read(a)</span><br><span class="line">    #define in2(a,b) in1(a),in1(b)</span><br><span class="line">    #define in3(a,b,c) in2(a,b),in1(c)</span><br><span class="line">    #define in4(a,b,c,d) in2(a,b),in2(c,d)</span><br><span class="line">    il void readl(ll &amp;x)&#123;</span><br><span class="line">        x=0;ll f=1;char c=getchar();</span><br><span class="line">        while(c&lt;&apos;0&apos;||c&gt;&apos;9&apos;)&#123;if(c==&apos;-&apos;)f=-f;c=getchar();&#125;</span><br><span class="line">        while(c&gt;=&apos;0&apos;&amp;&amp;c&lt;=&apos;9&apos;)&#123;x=x*10+c-&apos;0&apos;;c=getchar();&#125;</span><br><span class="line">        x*=f;</span><br><span class="line">    &#125;</span><br><span class="line">    il void read(int &amp;x)&#123;</span><br><span class="line">        x=0;int f=1;char c=getchar();</span><br><span class="line">        while(c&lt;&apos;0&apos;||c&gt;&apos;9&apos;)&#123;if(c==&apos;-&apos;)f=-f;c=getchar();&#125;</span><br><span class="line">        while(c&gt;=&apos;0&apos;&amp;&amp;c&lt;=&apos;9&apos;)&#123;x=x*10+c-&apos;0&apos;;c=getchar();&#125;</span><br><span class="line">        x*=f;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;using namespace io;</span><br><span class="line">#define N 2005</span><br><span class="line">int h,w,n,d;</span><br><span class="line">const int dir[4][2]=&#123;&#123;1,0&#125;,&#123;0,1&#125;,&#123;-1,0&#125;,&#123;0,-1&#125;&#125;;</span><br><span class="line">const int mod=1e9+7;</span><br><span class="line">struct node&#123;</span><br><span class="line">	int x,y,c;</span><br><span class="line">	bool operator &lt;(const node &amp;rhs) const&#123;</span><br><span class="line">		return c&gt;rhs.c;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;a[N];</span><br><span class="line">int dis(int i,int j)&#123;</span><br><span class="line">	return abs(a[i].x-a[j].x)+abs(a[i].y-a[j].y);</span><br><span class="line">&#125; </span><br><span class="line">ll map[N][N];</span><br><span class="line">bool vis[N][N];</span><br><span class="line">priority_queue &lt;node&gt; q;</span><br><span class="line">int main()&#123;</span><br><span class="line">	in4(h,w,n,d);</span><br><span class="line">	for(re int i=1;i&lt;=n;i++) in3(a[i].x,a[i].y,a[i].c);</span><br><span class="line">	for(re int i=1;i&lt;=n;i++)&#123;</span><br><span class="line">		for(re int j=i+1;j&lt;=n;j++)&#123;</span><br><span class="line">			if(dis(i,j)*d&lt;abs(a[i].c-a[j].c))&#123;</span><br><span class="line">				puts(&quot;PitayaCrying&quot;);</span><br><span class="line">				return 0;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	for(re int i=1;i&lt;=n;i++) q.push(a[i]);</span><br><span class="line">	while(!q.empty())&#123;</span><br><span class="line">		node now=q.top();</span><br><span class="line">		q.pop();</span><br><span class="line">		if(vis[now.x][now.y]) continue;</span><br><span class="line">		vis[now.x][now.y]=1;</span><br><span class="line">		map[now.x][now.y]=now.c;</span><br><span class="line">		for(re int i=0;i&lt;4;i++)&#123;</span><br><span class="line">			int nx=now.x+dir[i][0],ny=now.y+dir[i][1];</span><br><span class="line">			if(nx&lt;1||nx&gt;h||ny&lt;1||ny&gt;w||vis[nx][ny]) continue;</span><br><span class="line">			q.push((node)&#123;nx,ny,now.c+d&#125;); </span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	ll ans=0;</span><br><span class="line">	for(re int i=1;i&lt;=h;i++)&#123;</span><br><span class="line">		for(re int j=1;j&lt;=w;j++)&#123;</span><br><span class="line">			ans=(ans+map[i][j])%mod;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	printf(&quot;%lld&quot;,ans);</span><br><span class="line">	return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 
     </div>
 
@@ -293,14 +300,23 @@
       
 
       <footer class="post-footer">
+          
+            
+          
+          <div class="post-tags">
+            
+              <a href="/tags/题目/" rel="tag"># 题目</a>
+            
+          </div>
+        
 
         
 
           <div class="post-nav">
             <div class="post-nav-next post-nav-item">
               
-                <a href="/2019/08/23/牛客NOIP暑期七天营-普及组4 C/" rel="next" title="牛客NOIP暑期七天营-普及组4 C">
-                  <i class="fa fa-chevron-left"></i> 牛客NOIP暑期七天营-普及组4 C
+                <a href="/2019/08/23/hello-world/" rel="next" title="Hello World">
+                  <i class="fa fa-chevron-left"></i> Hello World
                 </a>
               
             </div>
@@ -308,6 +324,10 @@
             <span class="post-nav-divider"></span>
 
             <div class="post-nav-prev post-nav-item">
+              
+                <a href="/2019/08/23/newpost/" rel="prev" title="New Post">
+                  New Post <i class="fa fa-chevron-right"></i>
+                </a>
               
             </div>
           </div>
