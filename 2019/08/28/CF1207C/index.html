@@ -54,19 +54,19 @@
   };
 </script>
 
-  <meta name="description" content="总算有次比较正面的台风，然而还没开学，想颓废，看番">
-<meta name="keywords" content="日记">
+  <meta name="description" content="题目链接 DP 分搭一层和搭两层来讨论 代码： 12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849#include&amp;lt;cstdio&amp;gt;#include&amp;lt;algorithm&amp;gt;#include&amp;lt;cstring&amp;gt;using namespace s">
+<meta name="keywords" content="题解">
 <meta property="og:type" content="article">
-<meta property="og:title" content="台风天">
-<meta property="og:url" content="andymo.top/2019/08/24/diary/index.html">
+<meta property="og:title" content="CF1207C">
+<meta property="og:url" content="andymo.top/2019/08/28/CF1207C/index.html">
 <meta property="og:site_name" content="AndyMo&#39;s Blog">
-<meta property="og:description" content="总算有次比较正面的台风，然而还没开学，想颓废，看番">
+<meta property="og:description" content="题目链接 DP 分搭一层和搭两层来讨论 代码： 12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849#include&amp;lt;cstdio&amp;gt;#include&amp;lt;algorithm&amp;gt;#include&amp;lt;cstring&amp;gt;using namespace s">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-08-24T14:02:09.026Z">
+<meta property="og:updated_time" content="2019-08-28T04:37:02.019Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="台风天">
-<meta name="twitter:description" content="总算有次比较正面的台风，然而还没开学，想颓废，看番">
-  <link rel="canonical" href="andymo.top/2019/08/24/diary/">
+<meta name="twitter:title" content="CF1207C">
+<meta name="twitter:description" content="题目链接 DP 分搭一层和搭两层来讨论 代码： 12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849#include&amp;lt;cstdio&amp;gt;#include&amp;lt;algorithm&amp;gt;#include&amp;lt;cstring&amp;gt;using namespace s">
+  <link rel="canonical" href="andymo.top/2019/08/28/CF1207C/">
 
 
 <script id="page-configurations">
@@ -80,7 +80,7 @@
   };
 </script>
 
-  <title>台风天 | AndyMo's Blog</title>
+  <title>CF1207C | AndyMo's Blog</title>
   <meta name="generator" content="Hexo 3.9.0">
   
 
@@ -227,7 +227,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="andymo.top/2019/08/24/diary/">
+    <link itemprop="mainEntityOfPage" href="andymo.top/2019/08/28/CF1207C/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="AndyMo">
@@ -239,7 +239,7 @@
       <meta itemprop="name" content="AndyMo's Blog">
     </span>
       <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">台风天
+        <h1 class="post-title" itemprop="name headline">CF1207C
 
           
         </h1>
@@ -255,7 +255,7 @@
                 
               
 
-              <time title="创建时间：2019-08-24 21:55:48 / 修改时间：22:02:09" itemprop="dateCreated datePublished" datetime="2019-08-24T21:55:48+08:00">2019-08-24</time>
+              <time title="创建时间：2019-08-28 11:33:25 / 修改时间：12:37:02" itemprop="dateCreated datePublished" datetime="2019-08-28T11:33:25+08:00">2019-08-28</time>
             </span>
           
             
@@ -282,7 +282,13 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>总算有次比较正面的台风，然而还没开学，想颓废，看番</p>
+        <p><a href="https://codeforces.com/contest/1207/problem/C" target="_blank" rel="noopener">题目链接</a></p>
+<p><strong>DP</strong></p>
+<p>分搭一层和搭两层来讨论</p>
+<p>代码：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">namespace</span> io&#123;</span><br><span class="line">    <span class="meta">#<span class="meta-keyword">define</span> re register</span></span><br><span class="line">    <span class="meta">#<span class="meta-keyword">define</span> ll long long</span></span><br><span class="line">    <span class="meta">#<span class="meta-keyword">define</span> inf 1e18</span></span><br><span class="line">    <span class="meta">#<span class="meta-keyword">define</span> il inline </span></span><br><span class="line">    <span class="meta">#<span class="meta-keyword">define</span> in1(a) read(a)</span></span><br><span class="line">    <span class="meta">#<span class="meta-keyword">define</span> in2(a,b) in1(a),in1(b)</span></span><br><span class="line">    <span class="meta">#<span class="meta-keyword">define</span> in3(a,b,c) in2(a,b),in1(c)</span></span><br><span class="line">    <span class="meta">#<span class="meta-keyword">define</span> in4(a,b,c,d) in2(a,b),in2(c,d)</span></span><br><span class="line">    <span class="function">il <span class="keyword">void</span> <span class="title">readl</span><span class="params">(ll &amp;x)</span></span>&#123;</span><br><span class="line">        x=<span class="number">0</span>;ll f=<span class="number">1</span>;<span class="keyword">char</span> c=getchar();</span><br><span class="line">        <span class="keyword">while</span>(c&lt;<span class="string">'0'</span>||c&gt;<span class="string">'9'</span>)&#123;<span class="keyword">if</span>(c==<span class="string">'-'</span>)f=-f;c=getchar();&#125;</span><br><span class="line">        <span class="keyword">while</span>(c&gt;=<span class="string">'0'</span>&amp;&amp;c&lt;=<span class="string">'9'</span>)&#123;x=x*<span class="number">10</span>+c-<span class="string">'0'</span>;c=getchar();&#125;</span><br><span class="line">        x*=f;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function">il <span class="keyword">void</span> <span class="title">read</span><span class="params">(<span class="keyword">int</span> &amp;x)</span></span>&#123;</span><br><span class="line">        x=<span class="number">0</span>;<span class="keyword">int</span> f=<span class="number">1</span>;<span class="keyword">char</span> c=getchar();</span><br><span class="line">        <span class="keyword">while</span>(c&lt;<span class="string">'0'</span>||c&gt;<span class="string">'9'</span>)&#123;<span class="keyword">if</span>(c==<span class="string">'-'</span>)f=-f;c=getchar();&#125;</span><br><span class="line">        <span class="keyword">while</span>(c&gt;=<span class="string">'0'</span>&amp;&amp;c&lt;=<span class="string">'9'</span>)&#123;x=x*<span class="number">10</span>+c-<span class="string">'0'</span>;c=getchar();&#125;</span><br><span class="line">        x*=f;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;<span class="keyword">using</span> <span class="keyword">namespace</span> io;</span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> N 200005</span></span><br><span class="line"><span class="keyword">int</span> t;</span><br><span class="line"><span class="keyword">int</span> n,a,b;</span><br><span class="line">ll f[N][<span class="number">3</span>];</span><br><span class="line"><span class="keyword">char</span> s[N];</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	read(t);</span><br><span class="line">	<span class="keyword">while</span>(t--)&#123;</span><br><span class="line">		in3(n,a,b);</span><br><span class="line">		<span class="built_in">scanf</span>(<span class="string">" %s"</span>,s);</span><br><span class="line">		<span class="keyword">for</span>(re <span class="keyword">int</span> i=<span class="number">0</span>;i&lt;=n;i++) f[i][<span class="number">1</span>]=f[i][<span class="number">2</span>]=inf;<span class="comment">//初始化</span></span><br><span class="line">		f[<span class="number">0</span>][<span class="number">1</span>]=b;<span class="comment">//第一个只能一层</span></span><br><span class="line">		<span class="keyword">for</span>(re <span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)&#123;</span><br><span class="line">			<span class="keyword">if</span>(s[i<span class="number">-1</span>]==<span class="string">'1'</span>) f[i][<span class="number">2</span>]=f[i<span class="number">-1</span>][<span class="number">2</span>]+<span class="number">2l</span>l*b+a; </span><br><span class="line">			<span class="keyword">else</span>&#123;</span><br><span class="line">				f[i][<span class="number">1</span>]=min(f[i<span class="number">-1</span>][<span class="number">1</span>]+b+a,f[i<span class="number">-1</span>][<span class="number">2</span>]+b+<span class="number">2l</span>l*a);</span><br><span class="line">				f[i][<span class="number">2</span>]=min(f[i<span class="number">-1</span>][<span class="number">1</span>]+<span class="number">2l</span>l*b+<span class="number">2l</span>l*a,f[i<span class="number">-1</span>][<span class="number">2</span>]+<span class="number">2l</span>l*b+a);</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"%lld\n"</span>,f[n][<span class="number">1</span>]);<span class="comment">//最后一个只能一层</span></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>贪心感觉不太好写</p>
 
     </div>
 
@@ -298,7 +304,7 @@
           
           <div class="post-tags">
             
-              <a href="/tags/日记/" rel="tag"># 日记</a>
+              <a href="/tags/题解/" rel="tag"># 题解</a>
             
           </div>
         
@@ -308,8 +314,8 @@
           <div class="post-nav">
             <div class="post-nav-next post-nav-item">
               
-                <a href="/2019/08/24/牛客NOIP暑期七天营-普及组5 A/" rel="next" title="牛客NOIP暑期七天营-普及组5 A">
-                  <i class="fa fa-chevron-left"></i> 牛客NOIP暑期七天营-普及组5 A
+                <a href="/2019/08/27/Luogu P1650 田忌赛马/" rel="next" title="Luogu P1650 田忌赛马">
+                  <i class="fa fa-chevron-left"></i> Luogu P1650 田忌赛马
                 </a>
               
             </div>
@@ -318,8 +324,8 @@
 
             <div class="post-nav-prev post-nav-item">
               
-                <a href="/2019/08/24/牛客NOIP暑期七天营-普及组5-B/" rel="prev" title="牛客NOIP暑期七天营-普及组5 B">
-                  牛客NOIP暑期七天营-普及组5 B <i class="fa fa-chevron-right"></i>
+                <a href="/2019/08/29/CF1207D/" rel="prev" title="CF1207D">
+                  CF1207D <i class="fa fa-chevron-right"></i>
                 </a>
               
             </div>
